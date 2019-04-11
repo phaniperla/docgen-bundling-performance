@@ -9,7 +9,7 @@ object stitchBundles {
   val bodyString = "{\"formPayload\":{},\"outputType\": \"PDF\",\"templateId\": \"RkwtRlJNLUFQUC1FTkctMDAwMDIuZG9jeA==\"}"
 
   val postUserHttp = http("Generate PDF")
-    .post("/api/template-renditions")
+    .post("api/document-tasks")
     .header("Authorization", testUtil.getIdamAuth())
     .header("ServiceAuthorization", testUtil.getS2sAuth())
     .body(StringBody(bodyString))
