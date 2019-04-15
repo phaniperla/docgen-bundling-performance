@@ -4,7 +4,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import simulations.uk.gov.hmcts.reform.docgen.bundling.util.TestUtil
 
-object completeBundleTask {
+object BundleCompleteTask {
 
   val taskID = "123"
   val testUtil = new TestUtil()

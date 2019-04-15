@@ -6,4 +6,5 @@ results/*
 target/**
 *.iml
 build/
-.idea/
+.idea/**
+test/**
