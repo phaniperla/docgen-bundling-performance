@@ -1,15 +1,13 @@
-package uk.gov.hmcts.reform.docgen.bundling.scenarios
+package simulations.uk.gov.hmcts.reform.docgen.bundling.scenarios
+import play.api.libs.json.{JsValue, Json}
+
+import scala.io.Source
 
 object Main {
   def main(args: Array[String]) {
-    println( "Returned Value : " + addInt(5,7) );
+    println( "Returned Value : " );
   }
-
-  def addInt( a:Int, b:Int ) : Int = {
-    var sum:Int = 0
-    sum = a + b
-
-    return sum
-  }
-
+  val source: String = Source.fromFile("src/resources/case.json").getLines.mkString
+  val json: JsValue = Json.parse(source)
+  print(json)
 }

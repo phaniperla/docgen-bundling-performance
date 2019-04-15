@@ -1,14 +1,13 @@
-package uk.gov.hmcts.reform.docgen.bundling.scenarios
-
+package simulations.uk.gov.hmcts.reform.docgen.bundling.scenarios
 import io.gatling.http.Predef.{http, status}
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import uk.gov.hmcts.reform.docgen.bundling.util.TestUtil
+import simulations.uk.gov.hmcts.reform.docgen.bundling.util.TestUtil
 
 object completeBundleTask {
 
-  val taskID = "123";
-  val testUtil = new TestUtil();
+  val taskID = "123"
+  val testUtil = new TestUtil()
 
   val completeBundleTask = http("Complete Bundle Task")
     .get(s"api/document-tasks/${taskID}")

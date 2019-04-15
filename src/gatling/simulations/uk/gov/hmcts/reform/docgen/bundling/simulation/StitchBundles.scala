@@ -1,9 +1,8 @@
-package uk.gov.hmcts.reform.docgen.bundling.simulation
+package simulations.uk.gov.hmcts.reform.docgen.bundling.simulation
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import simulations.uk.gov.hmcts.reform.docgen.bundling.util.{Environment, Headers}
-import simulations.uk.gov.hmcts.reform.docgen.scenarios.createBundleTask
 
 import scala.concurrent.duration._
 
@@ -15,9 +14,6 @@ class StitchBundles extends Simulation{
     .headers(Headers.commonHeader)
 
   val stitchBundleScenarios = List (
-    createBundleTask.postUser.inject(
-      rampUsers(1) during(1 seconds)
-    )
   )
 
   setUp(stitchBundleScenarios)

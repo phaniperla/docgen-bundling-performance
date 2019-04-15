@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.docgen.bundling.util;
+package simulations.uk.gov.hmcts.reform.docgen.bundling.util;
 import io.restassured.RestAssured;
 import org.json.JSONObject;
 import org.springframework.http.HttpHeaders;

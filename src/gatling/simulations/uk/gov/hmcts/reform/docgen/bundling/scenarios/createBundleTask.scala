@@ -1,7 +1,7 @@
-package simulations.uk.gov.hmcts.reform.docgen.scenarios
+package simulations.uk.gov.hmcts.reform.docgen.bundling.scenarios
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import uk.gov.hmcts.reform.docgen.bundling.util.TestUtil
+import simulations.uk.gov.hmcts.reform.docgen.bundling.util.TestUtil
 
 object createBundleTask {
 

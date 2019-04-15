@@ -1,5 +1,4 @@
-package uk.gov.hmcts.reform.docgen.bundling.util;
-
+package simulations.uk.gov.hmcts.reform.docgen.bundling.util;
 import com.warrenstrange.googleauth.GoogleAuthenticator;
 import io.restassured.RestAssured;
 import org.json.JSONObject;
