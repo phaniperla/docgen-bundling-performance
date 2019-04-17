@@ -12,7 +12,7 @@ object StitchBundle {
   val json: JsValue = Json.parse(source)
 
   val postStitchBundle = http("Stitch Bundle")
-    .post("/api/new-bundle")
+    .post("/api/stitch-ccd-bundles")
     .header("Authorization", testUtil.getIdamAuth())
     .header("ServiceAuthorization", testUtil.getS2sAuth())
     .body(StringBody(json.toString()))
