@@ -8,6 +8,7 @@ import simulations.uk.gov.hmcts.reform.docgen.bundling.util.{Environment, Header
 import scala.concurrent.duration._
 
 class CreateNewBundle extends Simulation{
+
   val httpConf = http
     .proxy(Proxy("proxyout.reform.hmcts.net", 8080))
     .baseUrl(Environment.baseURL)
