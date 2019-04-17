@@ -12,7 +12,6 @@ object CreateBundle {
   val source: String = Source.fromFile("src/resources/case.json").getLines.mkString
   val json: JsValue = Json.parse(source)
 
-
   val postCreateBundleReq = http("New Bundle")
     .post("/api/new-bundle")
     .header("Authorization", testUtil.getIdamAuth())
