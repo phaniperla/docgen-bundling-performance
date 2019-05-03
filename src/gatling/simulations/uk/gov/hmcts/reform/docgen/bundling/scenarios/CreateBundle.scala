@@ -19,7 +19,9 @@ object CreateBundle {
     .body(StringBody(json.toString()))
     .header("Content-Type", "application/json")
     .check(status is 200)
+    .check(bodyString.saveAs("responseBody"))
 
   val postUser = scenario("New Bundle")
     .exec(postCreateBundleReq)
+    .exec { session => println(session("responseBody").as[String]); session}
 }
