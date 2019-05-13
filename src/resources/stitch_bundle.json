@@ -20,9 +20,9 @@
                   "description":"description",
                   "sortIndex":1,
                   "sourceDocument":{
-                    "document_url":"http://dm-store-aat.service.core-compute-aat.internal/documents/9bbbfef5-d3e2-49d1-a952-b0951924ba5f",
+                    "document_url":"%s",
                     "document_filename":"fn",
-                    "document_binary_url":"http://dm-store-aat.service.core-compute-aat.internal/documents/9bbbfef5-d3e2-49d1-a952-b0951924ba5f/binary"
+                    "document_binary_url":"%s/binary"
                   }
                 }
               }

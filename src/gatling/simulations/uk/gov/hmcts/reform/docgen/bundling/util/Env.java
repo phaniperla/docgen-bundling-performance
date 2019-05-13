@@ -16,6 +16,8 @@ public class Env {
         defaults.setProperty("S2S_BASE_URI", "http://localhost:4502");
         defaults.setProperty("FUNCTIONAL_TEST_CLIENT_S2S_TOKEN", "AAAAAAAAAAAAAAAA");
         defaults.setProperty("S2S_SERVICE_NAME", "em_gw");
+        defaults.setProperty("DM_STORE_APP_URL", "dm_store_url");
+
     }
 
     public static String getUseProxy() {
@@ -56,6 +58,10 @@ public class Env {
 
     public static String getS2sMicroservice() {
         return require("S2S_SERVICE_NAME");
+    }
+
+    public static String getDmStoreAppUrl() {
+        return require("DM_STORE_APP_URL");
     }
 
 }
