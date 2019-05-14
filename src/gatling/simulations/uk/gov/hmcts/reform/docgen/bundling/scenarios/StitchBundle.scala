@@ -23,7 +23,6 @@ object StitchBundle {
     .check(bodyString.saveAs("responseBody"))
 
   val postUser = scenario("Stitch Bundle")
-    //.exec(dmHelper.uploadDocument("src/resources/annotationTemplate.pdf"))
     .exec(postStitchBundleReq)
     .exec { session => println(session("responseBody").as[String]); session}
 
