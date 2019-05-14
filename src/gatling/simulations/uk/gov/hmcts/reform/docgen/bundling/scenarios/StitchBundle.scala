@@ -11,11 +11,10 @@ object StitchBundle {
   val testUtil = new TestUtil();
   val dmHelper = new DMHelper();
 
-  val source: String = Source.fromFile("src/resources/stitch_bundle.json").getLines.mkString
-  val sourceWithDocUri: String = source.format(dmHelper.uploadDocument("src/resources/annotationTemplate.pdf"))
-  //val dmDocument: String = Source.fromFile("src/resources/annotationTemplate.pdf").getLines.mkString
-  val json: JsValue = Json.parse(sourceWithDocUri)
-  // val documentUrl :String = dmHelper.uploadDocument("src/resources/annotationTemplate.pdf")
+  val sourceWithPlaceholders: String = Source.fromFile("src/resources/stitch_bundle.json").getLines.mkString
+  val documentUri: String = dmHelper.uploadDocument("src/resources/annotationTemplate.pdf")
+  val sourceWithDocumentUri: String = sourceWithPlaceholders.format(documentUri)
+  val json: JsValue = Json.parse(sourceWithDocumentUri)
 
 
   val postStitchBundle = http("Stitch Bundle")
@@ -30,6 +29,8 @@ object StitchBundle {
   val postUser = scenario("Stitch Bundle")
     //.exec(dmHelper.uploadDocument("src/resources/annotationTemplate.pdf"))
     .exec(postStitchBundle)
+    .exec("JJJ - requestbody is ")
+    .exec(print(json.toString()))
     .exec { session => println(session("responseBody").as[String]); session}
 
 }
