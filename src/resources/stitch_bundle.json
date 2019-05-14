@@ -20,9 +20,9 @@
                   "description":"description",
                   "sortIndex":1,
                   "sourceDocument":{
-                    "document_url":"%s",
+                    "document_url":"INSERT_URI_HERE",
                     "document_filename":"fn",
-                    "document_binary_url":"%s/binary"
+                    "document_binary_url":"INSERT_URI_HERE"
                   }
                 }
               }
