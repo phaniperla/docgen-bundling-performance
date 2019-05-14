@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 public class DMHelper {
     TestUtil testUtil = new TestUtil();
 
-    public String uploadDocument(String pdfName) {
+    public static String uploadDocument(String pdfName) {
         String url = new String("Example doc URI");
         return url;
 //        String url = s2sAuthRequest()
