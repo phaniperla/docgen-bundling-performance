@@ -20,9 +20,9 @@
                   "description":"description",
                   "sortIndex":1,
                   "sourceDocument":{
-                    "document_url":"INSERT_URI_HERE",
+                    "document_url":"http://dm-store-sprod.service.core-compute-sprod.internal/documents/7882f7fc-d800-457b-9541-4c913fa38c5c",
                     "document_filename":"fn",
-                    "document_binary_url":"INSERT_URI_HERE"
+                    "document_binary_url":"http://dm-store-sprod.service.core-compute-sprod.internal/documents/7882f7fc-d800-457b-9541-4c913fa38c5c"
                   }
                 }
               }
